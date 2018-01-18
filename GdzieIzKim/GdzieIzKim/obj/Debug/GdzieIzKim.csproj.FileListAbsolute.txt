@@ -117,6 +117,7 @@ C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\bin\System.Web.WebP
 C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.csprojResolveAssemblyReference.cache
 C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.dll
 C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.pdb
+C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.Migrations.AppStart.resources
+C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.csproj.GenerateResource.Cache

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<GdzieIzKim.Models.Lokalizacja>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kategoria.NazwaKat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NazwaLoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdresLoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InformacjeLoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SzerokoscLoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DlugoscLoc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kategoria.NazwaKat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NazwaLoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdresLoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InformacjeLoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SzerokoscLoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DlugoscLoc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LokalizacjaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LokalizacjaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LokalizacjaId })
+        </td>
+    </tr>
+}
+
+</table>
