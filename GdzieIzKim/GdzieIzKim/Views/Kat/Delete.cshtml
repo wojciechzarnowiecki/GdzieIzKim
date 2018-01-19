@@ -1,0 +1,39 @@
+﻿@model GdzieIzKim.Models.Kategoria
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Usuń kategorię</h2>
+
+<h3>Czy napewno usunąć?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaKat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaKat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisKat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisKat)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Powrót do listy kategorii", "Index")
+        </div>
+    }
+</div>

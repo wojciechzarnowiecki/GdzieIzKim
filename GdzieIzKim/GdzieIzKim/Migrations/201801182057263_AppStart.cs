@@ -8,7 +8,7 @@ namespace GdzieIzKim.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Kategorias",
+                "dbo.Kat",
                 c => new
                     {
                         KategoriaId = c.Int(nullable: false, identity: true),
@@ -18,7 +18,7 @@ namespace GdzieIzKim.Migrations
                 .PrimaryKey(t => t.KategoriaId);
             
             CreateTable(
-                "dbo.Lokalizacjas",
+                "dbo.Lok",
                 c => new
                     {
                         LokalizacjaId = c.Int(nullable: false, identity: true),
@@ -30,17 +30,17 @@ namespace GdzieIzKim.Migrations
                         KategoriaId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.LokalizacjaId)
-                .ForeignKey("dbo.Kategorias", t => t.KategoriaId, cascadeDelete: true)
+                .ForeignKey("dbo.Kat", t => t.KategoriaId, cascadeDelete: true)
                 .Index(t => t.KategoriaId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Lokalizacjas", "KategoriaId", "dbo.Kategorias");
-            DropIndex("dbo.Lokalizacjas", new[] { "KategoriaId" });
-            DropTable("dbo.Lokalizacjas");
-            DropTable("dbo.Kategorias");
+            DropForeignKey("dbo.Lok", "KategoriaId", "dbo.Kat");
+            DropIndex("dbo.Lok", new[] { "KategoriaId" });
+            DropTable("dbo.Lok");
+            DropTable("dbo.Kat");
         }
     }
 }

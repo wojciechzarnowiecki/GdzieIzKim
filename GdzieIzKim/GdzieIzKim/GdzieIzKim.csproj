@@ -196,8 +196,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KategoriasController.cs" />
-    <Compile Include="Controllers\LokalizacjasController.cs" />
+    <Compile Include="Controllers\KatController.cs" />
+    <Compile Include="Controllers\Lok.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DAL\gdzieDB.cs" />
     <Compile Include="Global.asax.cs">
@@ -287,16 +287,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Lokalizacjas\Create.cshtml" />
-    <Content Include="Views\Lokalizacjas\Delete.cshtml" />
-    <Content Include="Views\Lokalizacjas\Details.cshtml" />
-    <Content Include="Views\Lokalizacjas\Edit.cshtml" />
-    <Content Include="Views\Lokalizacjas\Index.cshtml" />
-    <Content Include="Views\Kategorias\Create.cshtml" />
-    <Content Include="Views\Kategorias\Delete.cshtml" />
-    <Content Include="Views\Kategorias\Details.cshtml" />
-    <Content Include="Views\Kategorias\Edit.cshtml" />
-    <Content Include="Views\Kategorias\Index.cshtml" />
+    <Content Include="Views\Lok\Create.cshtml" />
+    <Content Include="Views\Lok\Delete.cshtml" />
+    <Content Include="Views\Lok\Details.cshtml" />
+    <Content Include="Views\Lok\Edit.cshtml" />
+    <Content Include="Views\Lok\Index.cshtml" />
+    <Content Include="Views\Kat\Create.cshtml" />
+    <Content Include="Views\Kat\Delete.cshtml" />
+    <Content Include="Views\Kat\Details.cshtml" />
+    <Content Include="Views\Kat\Edit.cshtml" />
+    <Content Include="Views\Kat\Index.cshtml" />
+    <Content Include="Views\Home\AdminPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

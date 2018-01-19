@@ -121,3 +121,4 @@ C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKi
 C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.pdb
 C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.Migrations.AppStart.resources
 C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.csproj.GenerateResource.Cache
+C:\Users\wojci\Source\Repos\GdzieIzKim\GdzieIzKim\GdzieIzKim\obj\Debug\GdzieIzKim.csprojResolveAssemblyReference.cache

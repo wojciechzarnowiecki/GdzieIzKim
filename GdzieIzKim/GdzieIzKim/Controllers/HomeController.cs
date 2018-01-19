@@ -26,5 +26,10 @@ namespace GdzieIzKim.Controllers
 
             return View();
         }
+
+        public ActionResult AdminPanel()
+        {
+            return View();
+        }
     }
 }

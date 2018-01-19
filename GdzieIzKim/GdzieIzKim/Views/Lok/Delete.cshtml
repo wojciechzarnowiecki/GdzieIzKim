@@ -1,0 +1,71 @@
+﻿@model GdzieIzKim.Models.Lokalizacja
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Usuń lokalizację</h2>
+
+<h3>Czy napewno usunąć?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategoria.NazwaKat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategoria.NazwaKat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaLoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaLoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdresLoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdresLoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InformacjeLoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InformacjeLoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SzerokoscLoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SzerokoscLoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DlugoscLoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DlugoscLoc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Powrót do listy lokalizacji", "Index")
+        </div>
+    }
+</div>
