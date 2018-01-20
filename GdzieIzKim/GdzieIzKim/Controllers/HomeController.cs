@@ -13,7 +13,7 @@ namespace GdzieIzKim.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Mapa()
         {
             ViewBag.Message = "Your application description page.";
 
