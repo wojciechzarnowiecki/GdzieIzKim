@@ -197,7 +197,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KatController.cs" />
-    <Compile Include="Controllers\Lok.cs" />
+    <Compile Include="Controllers\LokController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DAL\gdzieDB.cs" />
     <Compile Include="Global.asax.cs">
@@ -265,7 +265,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Mapa.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -298,6 +298,7 @@
     <Content Include="Views\Kat\Edit.cshtml" />
     <Content Include="Views\Kat\Index.cshtml" />
     <Content Include="Views\Home\AdminPanel.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -21,6 +21,7 @@ namespace GdzieIzKim.Models
         [Display(Name = "Długość geograficzna")]
         public string DlugoscLoc { get; set; }
 
+        [Display(Name = "Kategoria")]
         public int KategoriaId { get; set; }
         [Display(Name = "Kategoria")]
         public virtual Kategoria Kategoria { get; set; }

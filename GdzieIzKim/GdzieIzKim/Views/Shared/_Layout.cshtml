@@ -21,12 +21,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Obrazek domku - strona główna", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Mapa", "Mapa", "Home")</li>
+                    <li>@Html.ActionLink("Dodaj", "Create", "Lok")</li>
+                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Informacje", "About", "Home")</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content, text-center" style="width: 50%">
         @RenderBody()
         <hr />
         <footer>

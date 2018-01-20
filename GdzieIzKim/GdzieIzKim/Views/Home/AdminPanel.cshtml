@@ -1,13 +1,25 @@
 ﻿@{
     ViewBag.Title = "Witaj w panelu administracyjnym";
+    var linkKat = "Kat/Index";
+    var linkLok = "Lok/Index";
+
 }
 
 <h2>@ViewBag.Title.</h2>
 <div class="row">
-        <h1>Administracja</h1>
-        @Html.ActionLink("Kategoriami", "Index", "Kat")
-        <br />
-        @Html.ActionLink("Lokalizacjami", "Index", "Lok")
+    <h1>Administracja</h1>
+
+    <br />
+
+    <a href="@linkKat" class="btn btn-danger btn-lg">
+        <span class="glyphicon glyphicon-wrench"></span> Kategorie
+    </a>
+
+    <br /><br />
+
+    <a href="@linkLok" class="btn btn-danger btn-lg">
+        <span class="glyphicon glyphicon-wrench"></span> Lokalizacje
+    </a>
 </div>
 
 @section Scripts {
