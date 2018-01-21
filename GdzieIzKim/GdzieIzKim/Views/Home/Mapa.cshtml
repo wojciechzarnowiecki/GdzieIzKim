@@ -1,38 +1,102 @@
-﻿@{
+﻿@model IEnumerable<GdzieIzKim.Models.Lokalizacja>
+
+@{
     ViewBag.Title = "";
 }
 
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+    <style>
+        #map {
+            height: 800px;
+        }
+    </style>
+</head>
 
+<body>
     <h2>Mapa ciekawych miejsc w Twojej okolicy</h2>
 
-    <a href="#" id="get_location" class="btn btn-success btn-lg">
-        <span class="glyphicon glyphicon-map-marker"></span> Obecna lokalizacja
-    </a>
+    <br /> <br />
 
-    <br /> <br /> 
-
-    <div id="map">
-        <iframe id="google_map" width="100%" height="800" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pl?q=50.6751067,17.921297600000003&z=12&output=embed"><</iframe>
-    </div>
-
+    <div id="map"></div>
     <script>
-        var c = function (pos) {
-            var lat = pos.coords.latitude,
-                long = pos.coords.longitude,
-                coords = lat + ', ' + long;
 
-            document.getElementById('google_map').setAttribute('src', 'https://maps.google.pl?q=' + coords + ' &z=15&output=embed');
+        function initMap() {
+            var myLatLng = { lat: 0, lng: 17.921297600000003 };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 50.6687500, lng: 17.8796660},
+                map: map,
+                title: 'Dom'
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 50.6823104, lng: 17.8778236},
+                map: map,
+                title: 'Plac zabaw'
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 50.6703750, lng: 17.9261797},
+                map: map,
+                title: 'Kino'
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 50.6517462, lng: 17.9045444},
+                map: map,
+                title: 'Basen Wodna Nuta'
+            });
+
+            @*@foreach(var item in Model)
+                {
+                    var marker = new google.maps.Marker({
+                    position: { lat: @Html.DisplayFor(modelItem => item.SzerokoscLoc), lng:  @Html.DisplayFor(modelItem => item.DlugoscLoc)},
+                    map: map,
+                    title: 'Hello World!'
+                        });
+            }*@
+
+            var infoWindow = new google.maps.InfoWindow;
+
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent('Jesteś tutaj.');
+                    infoWindow.open(map);
+                    map.setCenter(pos);
+                }, function () {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
         }
 
-
-        document.getElementById('get_location').onclick = function () {
-            navigator.geolocation.getCurrentPosition(c);
-            return false;
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: Serwis Geolocation przestał działać.' :
+                'Error: Twoja przeglądarka nie obsługuje geolokalizacji.');
+            infoWindow.open(map);
         }
+
     </script>
-
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsvXhEPlkCvqXapHw_En7QwyOML_Wvffc&callback=initMap">
+    </script>
 </body>
 </html>
