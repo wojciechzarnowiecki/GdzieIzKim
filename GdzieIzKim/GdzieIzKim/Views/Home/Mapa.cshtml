@@ -8,9 +8,14 @@
 
     <h2>Mapa ciekawych miejsc w Twojej okolicy</h2>
 
-    <a href="#" id="get_location">Pokaż obecną lokalizację</a>
+    <a href="#" id="get_location" class="btn btn-success btn-lg">
+        <span class="glyphicon glyphicon-map-marker"></span> Obecna lokalizacja
+    </a>
+
+    <br /> <br /> 
+
     <div id="map">
-        <iframe id="google_map" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pl?z=6&output=embed"><</iframe>
+        <iframe id="google_map" width="100%" height="800" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pl?q=50.6751067,17.921297600000003&z=12&output=embed"><</iframe>
     </div>
 
     <script>
@@ -19,7 +24,7 @@
                 long = pos.coords.longitude,
                 coords = lat + ', ' + long;
 
-            document.getElementById('google_map').setAttribute('src', 'https://maps.google.pl?q=' + coords +' &z=15&output=embed');
+            document.getElementById('google_map').setAttribute('src', 'https://maps.google.pl?q=' + coords + ' &z=15&output=embed');
         }
 
 

@@ -53,6 +53,9 @@ namespace GdzieIzKim.Controllers
         {
             if (ModelState.IsValid)
             {
+                lokalizacja.GeoCodeLat();
+                lokalizacja.GeoCodeLng();
+
                 db.Lokalizacja.Add(lokalizacja);
                 db.SaveChanges();
                 return RedirectToAction("Index", "Home");
